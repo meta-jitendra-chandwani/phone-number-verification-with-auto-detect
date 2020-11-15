@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SendOtpResponse } from 'app/model/sendOtpResponse';
-import { OtpService } from 'app/otp.service';
+import { OtpService } from 'app/services/otp.service';
 import { AlertService } from 'app/services/alert.service';
 import { Subject } from 'rxjs';
 declare var SMSReceive: any;

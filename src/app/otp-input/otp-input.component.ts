@@ -10,7 +10,7 @@ import {
   ViewChild
 } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { KeysPipe } from 'app/keys.pipe';
+import { KeysPipe } from 'app/pipe/keys.pipe';
 
 @Component({
   selector: 'app-otp-input',
