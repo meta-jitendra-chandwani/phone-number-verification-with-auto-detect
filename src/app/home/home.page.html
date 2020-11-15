@@ -1,0 +1,4 @@
+<ion-content [fullscreen]="true">
+  <app-header [isShownOn]="isShownOn"></app-header>
+  <app-verification [isShownOn]="isShownOn" (sendToParent)="retrieveFromChild($event)"></app-verification>
+</ion-content>

@@ -1,0 +1,57 @@
+<ion-grid class="main-grid" no-padding *ngIf="isShownOn == 'home'">
+  <ion-row class="margin-top">
+    <ion-col class="padding-20">
+      <ion-row>
+        <ion-label class="heading">
+          Phone Number Verification
+        </ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label class="middle-text">Please enter your mobile number to receive One Time Password</ion-label>
+      </ion-row>
+      <ion-row class="divider"> </ion-row>
+      <form [formGroup]="verificationForm" (ngSubmit)="sendOtp()">
+        <ion-row text-center>
+          <span class="country-code">+91</span>
+          <app-otp-input class="align-center" [inputLength]=input.mobile (onInputChange)="onPhoneNumberChange($event)">
+          </app-otp-input>
+        </ion-row>
+
+        <div *ngIf="submitted && verificationFormController?.phoneNumber?.errors" class="invalid-feedback">
+          <ion-label *ngIf="this.verificationFormController.phoneNumber.errors.required">
+            *Enter mobile number
+          </ion-label>
+        </div>
+        <button type="submit" expand="block" class="button-gradient">SEND OTP
+        </button>
+      </form>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-grid class="main-grid" no-padding *ngIf="isShownOn == 'verify'">
+  <ion-row class="margin-top">
+    <ion-col class="padding-20">
+      <ion-row>
+        <ion-label class="heading">
+          Verification Code
+        </ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label class="middle-text">OTP has been sent to your mobile number. Please verify</ion-label>
+      </ion-row>
+      <ion-row class="divider"> </ion-row>
+
+      <form [formGroup]="otpForm" (ngSubmit)="verifyOtp()">
+        <app-otp-input class="align-center" [detectedOtp]="detectedOtp.asObservable()" [inputLength]=input.otp
+          (onInputChange)="onOtpChange($event)">
+        </app-otp-input>
+        <button type="submit" expand="block" class="button-gradient">CONFIRM
+        </button>
+      </form>
+      <ion-row class="resend">
+        <span (click)="changeNumber()">Changes Number </span> | <strong (click)="sendOtp()">Resend OTP</strong>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</ion-grid>

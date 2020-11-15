@@ -1,0 +1,97 @@
+.otp-input {
+  border: 0px !important;
+  border-bottom: 1px solid #f26d8c !important;
+  border-radius: 0px !important;
+}
+
+.heading {
+  font-size: 24px;
+  margin: 0 auto 21px auto;
+  line-height: 30px;
+  font-family: Roboto, Medium;
+}
+
+button {
+  width: 95%;
+  height: 50px;
+  margin: 50px auto;
+  font-size: 20px;
+  box-shadow: 0px 10px 8px 4px rgba(0, 0, 0, 0.16);
+  color: white;
+  outline: none;
+}
+
+input:focus {
+  background-color: yellow;
+}
+
+#circle {
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 50%;
+}
+.middle-text {
+  padding: 5px;
+  line-height: 24px;
+  text-align: center;
+  margin: 0px auto;
+  font-size: 14px;
+  width: 75%;
+  font-family: Roboto, Medium;
+}
+
+.divider {
+  background-image: linear-gradient(#28a247, #6ab944);
+  width: 45px;
+  height: 6px;
+  margin: 20px auto;
+}
+
+.invalid-feedback {
+  margin: 10px;
+  float: right;
+
+  ion-label {
+    color: red;
+  }
+}
+.country-code {
+  margin: 5px;
+  --offset-top: 0px;
+  --offset-bottom: 0px;
+  font-size: 20px;
+  font-family: Roboto;
+}
+
+#otp input :focus {
+  background-color: #28a247;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.button-gradient {
+  background: linear-gradient(to right, #28a247, #6ab944);
+  border-radius: 25px;
+}
+
+.margin-top {
+  margin-top: 2em;
+}
+
+.padding-20 {
+  padding: 0px 20px;
+}
+
+.resend {
+  font-size: 15px;
+  display: block;
+  text-align: center;
+  margin: -13px;
+
+  strong {
+    color: #187338;
+  }
+}

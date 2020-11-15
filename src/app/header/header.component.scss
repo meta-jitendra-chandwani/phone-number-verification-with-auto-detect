@@ -1,0 +1,57 @@
+.svg-box {
+    position: absolute;
+    left: 50%;
+    margin-left: -40px;
+    top: 8rem;
+    margin-top: -40px;
+}
+.stop-color-1 {
+    stop-color: #6ab944;
+    stop-opacity: 1;
+}
+.stop-color-2 {
+    stop-color: #187338;
+    stop-opacity: 1;
+}
+
+.stop-color-3 {
+    stop-color: #f26d8c1a;
+    stop-opacity: 1;
+}
+.stop-color-4 {
+    stop-color: #f26d8c1a;
+    stop-opacity: 1;
+}
+
+svg {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.parent-svg {
+    width: 26rem;
+    height: 18rem;
+}
+
+.eclispse-1 {
+    position: absolute;
+    right: 37px;
+    top: -57px;
+    opacity: 0.3;
+}
+
+.eclispse-2 {
+    position: absolute;
+    top: -64px;
+    right: 38%;
+    opacity: 0.4;
+}
+
+.eclispse-3 {
+    position: absolute;
+    right: -91px;
+    top: -179px;
+    opacity: 0.5;
+}

@@ -1,0 +1,7 @@
+<div class="wrapper" *ngIf="otpForm?.controls">
+  <input #input [pattern]="allowNumbersOnly ? '\\d*' : ''" type="tel"
+    [ngClass]="{'active-box': otpForm?.controls[item].value && inputLength == 6, 'active': otpForm?.controls[item].value && inputLength == 10, 'otp-input-mobile': inputLength == 10, 'otp-input-otp': inputLength == 6}"
+    numberOnly maxlength="1" class="otp-input" autocomplete="off"
+    *ngFor="let item of otpForm?.controls | keys;let i=index" [formControl]="otpForm?.controls[item]"
+    id="otp_{{i}}_{{componentKey}}" (keydown)="onKeyDown($event)" (keyup)="onKeyUp($event,i)">
+</div>
